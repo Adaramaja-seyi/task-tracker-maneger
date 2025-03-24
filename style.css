@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.container{
+   background-color: aqua;
+   text-align: center;
+   width: 50%;
+   margin: auto;
+   height: 200px;
+}
+#taskInput{
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 6px;
+}
+button{
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 6px;
+}
