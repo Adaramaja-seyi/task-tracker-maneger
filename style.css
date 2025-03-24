@@ -3,6 +3,9 @@
     border: 0;
     box-sizing: border-box;
 }
+h2{
+    ma
+}
 .container{
    background-color: aqua;
    text-align: center;
@@ -19,4 +22,13 @@ button{
     padding: 10px;
     border: 1px solid gray;
     border-radius: 6px;
+}
+@media screen and (max-width:750px) { 
+    .container{ 
+        width: 100%;
+    }
+    button{
+        width: 50%;
+        margin-top: 3%;
+    }
 }

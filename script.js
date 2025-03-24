@@ -5,22 +5,25 @@ function addTask() {
     const taskInput = document.getElementById("taskInput");
     const categoryInput = document.getElementById("categoryInput");
     const description = taskInput.value.trim();
-    
     // trim() i used it to removes extra spaces from the input
     
-    if (description === "") return;  	//If the user doesn’t type anything (""), the function stops (return).
-
+    if (description === "") 
+      return  alert("Please Enter a Task")  ;  	
+       
     const newTask = {
         description: description,
         category: categoryInput.value,
         dateAdded: new Date(),
         completed: false,  // means the task is not done yet.
     };
-
+   
+  
     tasks.push(newTask);  //adds the task to our list 
     taskInput.value = ""; // Clear input field
     displayTasks();   //updates the list so the new task appears on the screen
 }
+
+
 
 function displayTasks() {
     const taskList = document.getElementById("taskList");
@@ -32,6 +35,7 @@ function displayTasks() {
         const taskElement = document.createElement("div");
         taskElement.classList.add("task");
         if (task.completed) taskElement.classList.add("completed");
+  
 
         taskElement.innerHTML = `
             ${task.description} (${task.category}) - ${task.dateAdded.toDateString()}
@@ -46,7 +50,10 @@ function displayTasks() {
 function toggleComplete(index) {
     tasks[index].completed = !tasks[index].completed;
     displayTasks();
-} //means the task is not done yet.
+}
+
+
+//means the task is not done yet.
 // 	tasks[index] gets the specific task from the array.
 // 	!tasks[index].completed flips its value:
 // 	If it was false, it becomes true (completed).
